@@ -44,21 +44,21 @@ class MapController < ApplicationController
         @tweet_two = @tweets[1]
 
         #Yelp API call
-         $y = Yelp::Client.new({ consumer_key: "Xnvaip0-eY6FzwXXgS-Ctw",
-                             consumer_secret: "T7KBu97EJk9acSbMSe3j1Z5F46c",
-                             token: "bSIXuYiiYZWLx7cPiYfQQYB5LCP49ps8",
-                             token_secret: "SBQtXi682Ce-niYRmGR2jNkqCAA"
-                           })
+        #  $y = Yelp::Client.new({ consumer_key: "Xnvaip0-eY6FzwXXgS-Ctw",
+        #                      consumer_secret: "T7KBu97EJk9acSbMSe3j1Z5F46c",
+        #                      token: "bSIXuYiiYZWLx7cPiYfQQYB5LCP49ps8",
+        #                      token_secret: "SBQtXi682Ce-niYRmGR2jNkqCAA"
+        #                    })
 
-        coordinates = { latitude: @lat, longitude: @lng }
-        #@response = $y.search_by_coordinates(coordinates)
-         @response = $y.search(@address, { radius_filter: @search})
-          if @response != nil
-            @yelp_one = @response.businesses[0]
-            @yelp_two = @response.businesses[1]
-          else
-            redirect_to "/map"
-        end
+        # coordinates = { latitude: @lat, longitude: @lng }
+        # #@response = $y.search_by_coordinates(coordinates)
+        #  @response = $y.search(@address, { radius_filter: @search})
+        #   if @response != nil
+        #     @yelp_one = @response.businesses[0]
+        #     @yelp_two = @response.businesses[1]
+        #   else
+        #     redirect_to "/map"
+        # end
       
       end
 

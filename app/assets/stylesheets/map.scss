@@ -162,18 +162,28 @@ h5 {
     z-index: 2;
 }   
 
+.favorites {
+    background-color: #D8D8D8;
+    width: 100%;
+}
+
 .panel-favorites {
     background-color: #fff;
     border: 1px solid $border-color;
     opacity: 0.8;
-    padding: $instagram-panel-padding;
+    padding: 10px;
     box-shadow: $panel-shadow;
     border: 1px solid $border-color;
     border-radius: 5px;
 }
 
 .panel-favorites img {
-    padding: 5px;
+    padding: 10px 5px;
+}
+
+.panel-favorites a {
+    color: black;
+    font-weight: bolder;
 }
 
 .panel-1 {

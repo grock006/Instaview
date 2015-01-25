@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-   root "map#index"
+  root "users#new"
   
-   get '/map' => 'map#index'
-   get '/map/show' => 'map#show'
+  get '/map' => 'map#index'
+  get '/map/show' => 'map#show'
 
   get '/signup' => 'users#new', as: :signup
   get '/login' => 'sessions#new', as: :login

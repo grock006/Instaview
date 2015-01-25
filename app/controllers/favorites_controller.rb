@@ -6,9 +6,13 @@ class FavoritesController < ApplicationController
 
 	def create
 		@favorite = Favorite.new(params.require(:favorite).permit(:name, :main_url, :profile_url, :text, :icon, :username, :latitude, :longitude))
-		if @favorite.save
+
+		if @favorite.save && current_user
 			redirect_to favorites_path
-		end
+		else
+			redirect_to map_show_path
+		end    
+	
 	end
 
 	def destroy
