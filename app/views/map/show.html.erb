@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street View containers</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyH6_rxueEsjg0nKXAN23lhziVfY1rirU"></script>
+    <script>
+      var map;
+      var panorama;
+      var yosemite = new google.maps.LatLng(<%= @lat %>,<%= @lng %>);
+
+      function initialize() {
+
+        // Set up the map
+        var mapOptions = {
+          center: yosemite,
+          zoom: 18,
+          addressControlOptions: {
+          position: google.maps.ControlPosition.BOTTOM
+        }
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+
+        panorama = map.getStreetView();
+        panorama.setVisible(true);
+        panorama.setPosition(yosemite);
+        panorama.setPov(({
+          heading: 0,
+          pitch: 0
+        }));
+      }
+
+      function toggleStreetView() {
+        var toggle = panorama.getVisible();
+        if (toggle == false) {
+          panorama.setVisible(true);
+        } else {
+          panorama.setVisible(false);
+        }
+      }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+  	    
+    <%= form_for Favorite.new do |f| %>
+      <div class="panel-1">
+        <i class="fa fa-instagram fa-lg" style="float:right"></i>
+        <a href="<%= @image_one.link %>" target="_blank" title="#"><img class="main" src="<%= @image_one.images.thumbnail.url %>">
+          <h4>
+            <img class="profile" src="<%= @image_one.user.profile_picture %>">  
+            <%= f.hidden_field :name, value: @image_one.user.username %>
+            <%= f.hidden_field :main_url, value: @image_one.images.thumbnail.url %>
+            <%= f.hidden_field :profile_url, value: @image_one.user.profile_picture %>
+            <%= f.hidden_field :icon, value: "fa-instagram" %>
+            <%= f.hidden_field :latitude, value: @lat %>
+            <%= f.hidden_field :longitude, value: @lng %>
+
+            
+            <%= @image_one.user.username%>
+          </h4>
+        </a>
+        <button type="submit" class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+      </div>
+    <% end %>
+
+
+    <%= form_for Favorite.new do |f| %>
+    <div class="panel-2">
+      <i class="fa fa-instagram fa-lg" style="float:right;"></i>
+        <a href="<%= @image_two.link %>" target="_blank" title="#">
+          <img src="<%= @image_two.images.thumbnail.url %>" class="main">       
+        <h4>
+          <img src="<%= @image_one.user.profile_picture %>" class="profile">  
+            <%= f.hidden_field :name, value: @image_two.user.username %>
+            <%= f.hidden_field :main_url, value: @image_two.images.thumbnail.url %>
+            <%= f.hidden_field :profile_url, value: @image_two.user.profile_picture %>
+            <%= f.hidden_field :icon, value: "fa-instagram" %>
+            <%= f.hidden_field :latitude, value: @lat %>
+            <%= f.hidden_field :longitude, value: @lng %>
+
+          <%= @image_one.user.username%>
+        </h4>
+        </a> 
+        <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+     </div>
+      <% end %>
+
+
+      <%= form_for Favorite.new do |f| %>
+    <div class="panel-4">
+      <i class="fa fa-instagram fa-lg" style="float:right;"></i>
+        <a href="<%= @image_four.link %>" target="_blank" title="#"><img src="<%= @image_four.images.thumbnail.url %>" class="main">
+            <h4>
+            <img class="profile" src="<%= @image_four.user.profile_picture %>" class="profile">  
+               <%= f.hidden_field :name, value: @image_four.user.username %>
+               <%= f.hidden_field :main_url, value: @image_four.images.thumbnail.url %>
+              <%= f.hidden_field :profile_url, value: @image_four.user.profile_picture %>
+              <%= f.hidden_field :icon, value: "fa-instagram" %>
+            <%= f.hidden_field :latitude, value: @lat %>
+            <%= f.hidden_field :longitude, value: @lng %>
+
+            <%= @image_four.user.username%>
+          </h4>
+        </a>
+        <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+    </div>
+    <% end %>
+
+
+    <%= form_for Favorite.new do |f| %>
+    <div class="panel-5">
+          <i class="fa fa-instagram fa-lg" style="float:right;"></i>
+        <a href="<%= @image_five.link %>" target="_blank" title="#"><img src="<%= @image_five.images.thumbnail.url %>" class="main">
+           <h4>
+            <img class="profile" src="<%= @image_five.user.profile_picture %>" class="profile">  
+              <%= f.hidden_field :name, value: @image_five.user.username %>
+              <%= f.hidden_field :main_url, value: @image_five.images.thumbnail.url %>
+              <%= f.hidden_field :profile_url, value: @image_five.user.profile_picture %>
+              <%= f.hidden_field :icon, value: "fa-instagram" %>
+              <%= f.hidden_field :latitude, value: @lat %>
+              <%= f.hidden_field :longitude, value: @lng %>
+
+            <%= @image_five.user.username%>
+          </h4>
+        </a>
+        <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+     </div>
+      <% end %>    
+
+     <%= form_for Favorite.new do |f| %>
+    <div class="panel-6">
+          <i class="fa fa-instagram fa-lg" style="float:right;"></i>
+        <a href="<%= @image_six.link %>" target="_blank" title="#"><img src="<%= @image_six.images.thumbnail.url %>" class="main">
+           <h4>
+            <img class="profile" src="<%= @image_six.user.profile_picture %>" class="profile">  
+              <%= f.hidden_field :name, value: @image_six.username %>
+              <%= f.hidden_field :main_url, value: @image_six.images.thumbnail.url %>
+              <%= f.hidden_field :profile_url, value: @image_six.user.profile_picture %>
+              <%= f.hidden_field :icon, value: "fa-instagram" %>
+              <%= f.hidden_field :latitude, value: @lat %>
+              <%= f.hidden_field :longitude, value: @lng %>
+
+            <%= @image_six.user.username%>
+          </h4>
+        </a>
+        <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+     </div>
+     <% end %>
+    
+    <!-- Tweets -->
+
+    <%= form_for Favorite.new do |f| %>
+     <div class="panel-7">
+        <i class="fa fa-twitter fa-lg" style="float:right"></i>
+        <ul class="media-list">
+            <li class="media">
+              <a class="media-left" href="#" title="#">
+                <img src="<%= @tweet_one.user.profile_image_url %>" alt="">
+              </a>
+              <div class="media-body">
+                <h5 class="media-heading"><%= @tweet_one.user.name %> </h5>
+                <h5> <a href="http://www.twitter.com/<%= @tweet_one.user.screen_name %>">
+                    <%= f.hidden_field :name, value: @tweet_one.user.name %>
+                    <%= f.hidden_field :username, value: @tweet_one.user.screen_name %>
+                    <%= f.hidden_field :profile_url, value: @tweet_one.user.profile_image_url %>
+                    <%= f.hidden_field :text, value: @tweet_one.text %>
+                    <%= f.hidden_field :icon, value: "fa-twitter" %>
+                    <%= f.hidden_field :latitude, value: @lat %>
+                    <%= f.hidden_field :longitude, value: @lng %>
+
+
+                @<%= @tweet_one.user.screen_name %></a></h5>
+                <p>
+                  <a href="http://www.twitter.com/<%= @tweet_one.user.screen_name %>/status/<%= @tweet_one.id %>">
+                  <%= @tweet_one.text %>
+                   </a>
+                </p>
+              </div>
+            </li>
+          </ul>
+              <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+     </div>
+     <% end %>
+
+
+        <%= form_for Favorite.new do |f| %>
+     <div class="panel-8">
+        <i class="fa fa-twitter fa-lg" style="float:right"></i>
+        <ul class="media-list">
+            <li class="media">
+              <a class="media-left" href="#" title="#">
+                <img src="<%= @tweet_two.user.profile_image_url %>" alt="">
+              </a>
+              <div class="media-body">
+                <h5 class="media-heading"><%= @tweet_two.user.name %> </h5>
+                <h5> <a href="http://www.twitter.com/<%= @tweet_two.user.screen_name %>">
+                    <%= f.hidden_field :name, value: @tweet_two.user.name %>
+                    <%= f.hidden_field :username, value: @tweet_two.user.screen_name %>
+                    <%= f.hidden_field :profile_url, value: @tweet_two.user.profile_image_url %>
+                    <%= f.hidden_field :text, value: @tweet_two.text %>
+                    <%= f.hidden_field :icon, value: "fa-twitter" %>
+                    <%= f.hidden_field :latitude, value: @lat %>
+                    <%= f.hidden_field :longitude, value: @lng %>
+
+
+                @<%= @tweet_one.user.screen_name %></a></h5>
+                <p>
+                  <a href="http://www.twitter.com/<%= @tweet_two.user.screen_name %>/status/<%= @tweet_two.id %>">
+                  <%= @tweet_two.text %>
+                   </a>
+                </p>
+              </div>
+            </li>
+          </ul>
+              <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+     </div>
+    <% end %>
+    
+<!-- Yelp -->
+
+       <%= form_for Favorite.new do |f| %>
+      <div class="panel-9">
+        <i class="fa fa-yelp fa-lg" style="float:right"></i>
+        <ul class="media-list">
+            <li class="media">  
+              <a class="media-left" href="#" title="#">
+                  <img src="<%= @yelp_one.image_url %>">
+              </a>
+              <div class="media-body">
+                <h5 class="media-heading">
+                <a href="<%= @yelp_one.url %>"><%= @yelp_one.name %></a>
+              </h5>
+                <p>
+                  <%= @yelp_one.location.display_address[0] %><br>
+                  <%= @yelp_one.categories[0][0] %><br>
+                  <img src="<%= @yelp_one.rating_img_url %>"><br>
+                    <%= f.hidden_field :name, value: @yelp_one.name %>
+                    <%= f.hidden_field :profile_url, value: @yelp_one.image_url %>
+                    <%= f.hidden_field :main_url, value: @yelp_one.rating_img_url %>
+                    <%= f.hidden_field :text, value: @yelp_one.location.display_address[0] %>
+                    <%= f.hidden_field :icon, value: "fa-yelp" %>
+                    <%= f.hidden_field :latitude, value: @lat %>
+                    <%= f.hidden_field :longitude, value: @lng %>
+
+                </p>
+              </div>
+            </li>
+          </ul>
+              <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+     </div>
+    <% end %>
+
+
+         <%= form_for Favorite.new do |f| %>
+           <div class="panel-10">
+        <i class="fa fa-yelp fa-lg" style="float:right"></i>
+        <ul class="media-list">
+            <li class="media">  
+              <a class="media-left" href="#" title="#">
+                  <img src="<%= @yelp_two.image_url %>">
+              </a>
+              <div class="media-body">
+                <h5 class="media-heading">
+                <a href="<%= @yelp_two.url %>"><%= @yelp_two.name %></a>
+              </h5>
+                <p>
+                  <%= @yelp_two.location.display_address[0] %><br>
+                  <%= @yelp_two.categories[0][0] %><br>
+                  <img src="<%= @yelp_two.rating_img_url %>"><br>
+                    <%= f.hidden_field :name, value: @yelp_two.name %>
+                    <%= f.hidden_field :profile_url, value: @yelp_two.image_url %>
+                    <%= f.hidden_field :main_url, value: @yelp_two.rating_img_url %>
+                    <%= f.hidden_field :text, value: @yelp_two.location.display_address[0] %>
+                    <%= f.hidden_field :icon, value: "fa-yelp" %>
+                    <%= f.hidden_field :latitude, value: @lat %>
+                    <%= f.hidden_field :longitude, value: @lng %>
+                </p>
+              </div>
+            </li>
+          </ul>
+              <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
+     </div>
+    <% end %>
+     
+
+
+  
+     <div id="panel-toggle" style="margin-left:-100px">
+      <button type="button" value="Toggle Street View" onclick="toggleStreetView();" class="btn btn-default btn-search">Toggle Map View</button>
+    </div>
+    <div id="map-canvas"></div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

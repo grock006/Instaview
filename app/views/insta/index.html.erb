@@ -1,0 +1,61 @@
+<h1>Location</h1>
+
+      <form action="/show" role="search" >
+     <!--      <input placeholder="Enter Location" type="text" name="term"/> -->
+    <!--            <input placeholder="Enter Latitude" type="text" name="lat"/>
+               <input placeholder="Enter Longitude" type="text" name="long"/> -->
+               <input placeholder="Enter Address" type="text" name="address">
+          <button type="submit">Search</button>
+       </form>
+<br>
+<br>
+
+<!--<%= @a %>-->
+
+<br>
+
+<%= @b %>
+<%= @c %>
+
+<br>
+
+<!--<%= @test_two %>-->
+
+<br>
+<% @x.each do |tweet| %>
+Text: <%= tweet.text %><br>
+Username: <%= tweet.user.screen_name %><br>
+Name: <%= tweet.user.name %><br>
+Source: <%= tweet.source %><br>
+<img src="<%= tweet.user.profile_image_url %>"> <br>
+<%= tweet.geo.coordinates %><br>
+<%= tweet.created_at %><br>
+<br>
+<% end %>
+
+<h1>Cats</h1>
+
+<h1>Yelp Info:</h1>
+
+
+<% @yelp.each do |i|%>
+<a href="<%= i.url %>"><%= i.name %></a>
+<br>
+<img src="<%= i.image_url %>"><br>
+<%= i.location.display_address[0] %><br>
+<%= i.categories[0][0] %><br>
+<img src="<%= i.rating_img_url_small %>"><br>
+<br>
+<% end %>
+
+
+
+
+
+ <% @lo_images.each do |i|%>
+    <a href="<%= i.link %>" target="_blank" title="#"><img src="<%= i.images.low_resolution.url %>"></a>
+    <img src="<%= i.user.profile_picture %>"><br>
+    <%= i.user.username %><br>
+    <%= i.location.name %><br>
+<% end %> 
+
