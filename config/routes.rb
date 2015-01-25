@@ -4,9 +4,6 @@ Rails.application.routes.draw do
    get '/map' => 'map#index'
    get '/map/show' => 'map#show'
 
-   get '/' => 'insta#index'
-   get '/show'  => 'insta#show'
-
   get '/signup' => 'users#new', as: :signup
   get '/login' => 'sessions#new', as: :login
   post '/login' => 'sessions#create'
@@ -14,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-   resources :favorites
+resources :favorites
 
 
 end

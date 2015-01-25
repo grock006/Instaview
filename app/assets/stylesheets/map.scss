@@ -47,6 +47,17 @@ img.profile {
 .navbar {
     margin-bottom: 0px;
 }
+
+.navbar-nav > li {
+    color: white;
+    padding-top: 13px;
+    padding-right: 10px;
+}
+
+.navbar-nav li  a {
+    font-size: 15px;
+}
+
 p {
     margin: 0;
     width: 100%;
@@ -80,8 +91,8 @@ h5 {
 
 #panel-toggle {
         position: absolute;
-        top: 7px;
-        left: 90%;
+        top: 8%;
+        left: 99%;
         margin-left: -100px;
         z-index: 5;
         background-color: black;
@@ -188,7 +199,7 @@ h5 {
 }
 .panel-7 {
     position: absolute;
-    top: 30%;
+    top: 15%;
     left: 45%;
     z-index: 8;
     background-color: #fff;
