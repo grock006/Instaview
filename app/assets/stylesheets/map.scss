@@ -122,8 +122,22 @@ h5 {
     border: 1px solid $border-color;
     border-radius: 5px;
     z-index: 5;
-    margin-top: 30%;
+    margin-top: 15%;
 }
+
+.background-yosemite {
+    background-image: url("yosemite.jpg");
+    background-size: cover;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+
+  //   -webkit-filter: blur(5px);
+  // -moz-filter: blur(5px);
+  // -o-filter: blur(5px);
+  // -ms-filter: blur(5px);
+  // filter: blur(5px);
+}
+
 .panel-favorites {
     background-color: #fff;
     border: 1px solid $border-color;
