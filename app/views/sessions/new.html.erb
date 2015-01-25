@@ -1,9 +1,22 @@
-<h1>Login</h1>
 
-<%= form_for :user, url: '/login' do |f| %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
 
-  Email: <%= f.text_field :email %><br>
-  Password: <%= f.password_field :password %><br>
-  <%= f.submit "Login" %>
+				<%= form_for :user, url: '/login' do |f| %>
 
-<% end %>
+				<div class="form-group signup-form">
+				  <h1>Login</h1>
+				  <strong>Email: </strong>
+				  <%= f.text_field :email, class: "form-control"  %><br>
+				  <strong>Password: </strong>
+				  <%= f.password_field :password, class: "form-control"  %><br>
+				  <%= f.submit "Login", class: "btn btn-default" %><br>
+				</div>
+				<% end %>
+
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>	

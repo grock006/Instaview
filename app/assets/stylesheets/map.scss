@@ -113,6 +113,17 @@ h5 {
     transform: rotateY(40deg);
     background-color: #fff;
 }
+.signup-form {
+    background-color: #fff;
+    border: 1px solid $border-color;
+    opacity: 0.8;
+    padding: 20px;
+    box-shadow: $panel-shadow;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    z-index: 5;
+    margin-top: 30%;
+}
 .panel-favorites {
     background-color: #fff;
     border: 1px solid $border-color;

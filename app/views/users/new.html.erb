@@ -1,10 +1,27 @@
-<%= form_for @user do |f| %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
 
-  First Name: <%= f.text_field :first_name %><br>
-  Last Name: <%= f.text_field :last_name %><br>
-  Email: <%= f.text_field :email %><br>
-  Password: <%= f.password_field :password %><br>
-  Please confirm your password: <%= f.password_field :password_confirmation %><br>
-  <%= f.submit "Signup" %><br>
+				<%= form_for @user do |f| %>
 
-<% end %>
+				<div class="form-group signup-form">
+					<h1>Signup</h1>
+				  <strong>First Name: </strong>
+				  <%= f.text_field :first_name, class: "form-control" %><br>
+				 <strong> Last Name: </strong>
+				  <%= f.text_field :last_name, class: "form-control" %><br>
+				  <strong>Email: </strong>
+				  <%= f.text_field :email, class: "form-control"  %><br>
+				  <strong>Password: </strong>
+				  <%= f.password_field :password, class: "form-control"  %><br>
+				  <strong>Please confirm your password: </strong>
+				  <%= f.password_field :password_confirmation, class: "form-control"  %><br>
+				  <%= f.submit "Signup", class: "btn btn-default" %><br>
+				</div>
+				<% end %>
+
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>	
