@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation))
 
     if @user.save # sign up was success
-      redirect_to map_path
+      redirect_to "/login"
     else
       render :new
     end

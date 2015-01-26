@@ -7,6 +7,7 @@ class User
   field :email, type: String
   field :password_digest, type: String
   field :favorite_location, type: String
+  has_many :favorites
 
   has_secure_password 
 

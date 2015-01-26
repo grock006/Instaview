@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:user][:password])
       flash[:success] = "You logged in successfully!"
       session[:user_id] = user.id
-      redirect_to "/favorites"
+      redirect_to "/map"
     else
       flash.now[:danger] = "Username or password incorrect."
       render :new
