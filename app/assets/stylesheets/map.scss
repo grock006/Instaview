@@ -1,9 +1,12 @@
+// GLOBAL VARIABLES //////////////////////////////////////
+
 $instagram-panel-padding: 5px;
 $panel-shadow: 5px 5px 2px #323232;
 $border-color: #323232;
 $instagram-panel-width: 140px;
 $twitter-panel-width: 300px;
 
+// GLOBAL STYLES ////////////////////////////////////////
 html, body, #map-canvas {
     height: 100%;
     margin: 0px;
@@ -20,30 +23,12 @@ a:hover {
     text-decoration: none;
 }
 
-h4 {
-    margin:0; 
-}
-.media-heading {
-    margin: 0;
-}
+// NAVBAR STYLES /////////////////////////////////
 button.btn-search  {
     border-radius: 0px;
     height: 34px;
     font-size: 12px;
 }
-
-.form-control {
-    border-radius: 0px;
-    padding: 15px;
-}
-
-img.main {
-    width:100px;
-}
-img.profile {
-    width: 10%;
-}
-
 .navbar {
     margin-bottom: 0px;
     border-bottom: 1px solid #D8D8D8; 
@@ -59,63 +44,19 @@ img.profile {
     font-size: 15px;
     color: white;
 }
-
-p {
-    margin: 0;
-    width: 100%;
-    padding: 0px;
-    padding-top: 5px;
-    font-size: 12px;
-}
-
-p a {
-    color: black;
-}
-
-h4 {
-    width: 150px;
-    padding: 5px;
-    margin: 0;
-    font-size: 10px;
-}
-h5 {
-    padding: 0px;
-    margin: 0px;
-}
-
-.fa-star-o:hover {
-    color: yellow;
-}
-
 .navbar-inverse .navbar-brand {
     color: white;
     font-size: 25px;
 }
 
-#panel-toggle {
-        position: absolute;
-        top: 8%;
-        left: 99%;
-        margin-left: -100px;
-        z-index: 5;
-        background-color: black;
-      }
 
-.outline {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: none;
-    -webkit-perspective: 150px; /* Chrome, Safari, Opera  */
-    perspective: 150px;
+// SIGNUP/LOGIN FORMS /////////////////////////// 
+
+.form-control {
+    border-radius: 0px;
+    padding: 15px;
 }
 
-.inner {
-    position: absolute;
-    -webkit-transform: rotateY(40deg); /* Chrome, Safari, Opera  */
-    transform: rotateY(40deg);
-    background-color: #fff;
-}
 .signup-form {
     background-color: #fff;
     border: 1px solid $border-color;
@@ -132,13 +73,6 @@ h5 {
     background-image: url("yosemite.jpg");
     background-size: cover;
     height: 100%;
-
-
-  //   -webkit-filter: blur(5px);
-  // -moz-filter: blur(5px);
-  // -o-filter: blur(5px);
-  // -ms-filter: blur(5px);
-  // filter: blur(5px);
 }
 
 
@@ -146,13 +80,6 @@ h5 {
     background-image: url("times_square.jpg");
     background-size: cover;
     height: 100%;
-
-
-  //   -webkit-filter: blur(5px);
-  // -moz-filter: blur(5px);
-  // -o-filter: blur(5px);
-  // -ms-filter: blur(5px);
-  // filter: blur(5px);
 }
 
 
@@ -164,9 +91,13 @@ h5 {
     z-index: 2;
 }   
 
+
+// FAVORITES PAGE //////////////////////////////////////
+
 .favorites {
     background-color: #D8D8D8;
     width: 100%;
+    height: 100%;
     background-size: contain;
 }
 .navbar-nav li .blue-favorites a  {
@@ -192,6 +123,50 @@ h5 {
     font-weight: bolder;
 }
 
+
+// PANEL STYLES ON MAP SHOW PAGE //////////////////////////////
+p {
+    margin: 0;
+    width: 100%;
+    padding: 0px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+p a {
+    color: black;
+}
+
+h4 {
+    width: 150px;
+    padding: 5px;
+    margin: 0;
+    font-size: 10px;
+}
+h5 {
+    padding: 0px;
+    margin: 0px;
+}
+.fa-star-o:hover {
+    color: yellow;
+}
+.media-heading {
+    margin: 0;
+}
+img.main {
+    width:100px;
+}
+img.profile {
+    width: 10%;
+}
+
+#panel-toggle {
+        position: absolute;
+        top: 8%;
+        left: 99%;
+        margin-left: -100px;
+        z-index: 5;
+        background-color: black;
+}
 .panel-1 {
     position: absolute;
     top: 20%;
@@ -290,33 +265,4 @@ h5 {
     box-shadow: $panel-shadow;
     width: $twitter-panel-width;
 }
-.panel-9 {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    z-index: 5;
-    background-color: #fff;
-    border: 2px solid #323232;
-    border-radius: 10px;
-    opacity: 0.8;
-    width: 300px;
-    padding: 10px 10px 5px 10px;
-    box-shadow: $panel-shadow;
-    width: $twitter-panel-width;
-}
-.panel-10 {
-    position: absolute;
-    top: 70%;
-    left: 25%;
-    z-index: 5;
-    background-color: #fff;
-    border: 2px solid #323232;
-    border-radius: 10px;
-    opacity: 0.8;
-    width: 300px;
-    padding: 10px 10px 5px 10px;
-    box-shadow: $panel-shadow;
-    width: $twitter-panel-width;
-}
-
      

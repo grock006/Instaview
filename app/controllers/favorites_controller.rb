@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
 		if @favorite.save && current_user
 			redirect_to favorites_path
 		else
-			redirect_to "signup"
+			redirect_to "/signup"
 		end    
 	
 	end
