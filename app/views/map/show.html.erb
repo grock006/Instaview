@@ -50,18 +50,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <i class="fa fa-instagram fa-lg" style="float:right"></i>
         <a href="<%= @image_one.link %>" target="_blank" title="#"><img class="main" src="<%= @image_one.images.thumbnail.url %>">
           <h4>
-            <img class="profile" src="<%= @image_one.user.profile_picture %>">  
+            <img class="profile" src="<%= @image_one.user.profile_picture %>">               
+            <% if current_user %>
             <%= f.hidden_field :name, value: @image_one.user.username %>
             <%= f.hidden_field :main_url, value: @image_one.images.thumbnail.url %>
             <%= f.hidden_field :profile_url, value: @image_one.user.profile_picture %>
             <%= f.hidden_field :icon, value: "fa-instagram" %>
             <%= f.hidden_field :latitude, value: @lat %>
             <%= f.hidden_field :longitude, value: @lng %>
-            
-            <% if current_user %>
             <%= f.hidden_field :user_id, value: current_user.id %>
-            <% else %>
-            <%= f.hidden_field :user_id, value: nil %>
             <% end %>
 
             
@@ -79,7 +76,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <a href="<%= @image_two.link %>" target="_blank" title="#">
           <img src="<%= @image_two.images.thumbnail.url %>" class="main">       
         <h4>
-          <img src="<%= @image_one.user.profile_picture %>" class="profile">  
+          <img src="<%= @image_one.user.profile_picture %>" class="profile">             
+            <% if current_user %>  
             <%= f.hidden_field :name, value: @image_two.user.username %>
             <%= f.hidden_field :main_url, value: @image_two.images.thumbnail.url %>
             <%= f.hidden_field :profile_url, value: @image_two.user.profile_picture %>
@@ -87,6 +85,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <%= f.hidden_field :latitude, value: @lat %>
             <%= f.hidden_field :longitude, value: @lng %>
            <%= f.hidden_field :user_id, value: current_user.id %>
+              <% end %>
 
           <%= @image_one.user.username%>
         </h4>
@@ -102,6 +101,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <a href="<%= @image_four.link %>" target="_blank" title="#"><img src="<%= @image_four.images.thumbnail.url %>" class="main">
             <h4>
             <img class="profile" src="<%= @image_four.user.profile_picture %>" class="profile">  
+
+            <% if current_user %>
                <%= f.hidden_field :name, value: @image_four.user.username %>
                <%= f.hidden_field :main_url, value: @image_four.images.thumbnail.url %>
               <%= f.hidden_field :profile_url, value: @image_four.user.profile_picture %>
@@ -109,6 +110,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <%= f.hidden_field :latitude, value: @lat %>
             <%= f.hidden_field :longitude, value: @lng %>
             <%= f.hidden_field :user_id, value: current_user.id %>
+               <% end %>
 
             <%= @image_four.user.username%>
           </h4>
@@ -124,6 +126,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <a href="<%= @image_five.link %>" target="_blank" title="#"><img src="<%= @image_five.images.thumbnail.url %>" class="main">
            <h4>
             <img class="profile" src="<%= @image_five.user.profile_picture %>" class="profile">  
+
+            <% if current_user %>
               <%= f.hidden_field :name, value: @image_five.user.username %>
               <%= f.hidden_field :main_url, value: @image_five.images.thumbnail.url %>
               <%= f.hidden_field :profile_url, value: @image_five.user.profile_picture %>
@@ -131,6 +135,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
               <%= f.hidden_field :latitude, value: @lat %>
               <%= f.hidden_field :longitude, value: @lng %>
               <%= f.hidden_field :user_id, value: current_user.id %>
+              <% end %>
 
             <%= @image_five.user.username%>
           </h4>
@@ -145,13 +150,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <a href="<%= @image_six.link %>" target="_blank" title="#"><img src="<%= @image_six.images.thumbnail.url %>" class="main">
            <h4>
             <img class="profile" src="<%= @image_six.user.profile_picture %>" class="profile">  
+
+            <% if current_user %>
               <%= f.hidden_field :name, value: @image_six.username %>
               <%= f.hidden_field :main_url, value: @image_six.images.thumbnail.url %>
               <%= f.hidden_field :profile_url, value: @image_six.user.profile_picture %>
               <%= f.hidden_field :icon, value: "fa-instagram" %>
               <%= f.hidden_field :latitude, value: @lat %>
               <%= f.hidden_field :longitude, value: @lng %>
-                   <%= f.hidden_field :user_id, value: current_user.id %>
+              <%= f.hidden_field :user_id, value: current_user.id %>
+                 <% end %>
 
             <%= @image_six.user.username%>
           </h4>
@@ -173,6 +181,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
               <div class="media-body">
                 <h5 class="media-heading"><%= @tweet_one.user.name %> </h5>
                 <h5> <a href="http://www.twitter.com/<%= @tweet_one.user.screen_name %>" target="_blank">
+
+                    <% if current_user %>
                     <%= f.hidden_field :name, value: @tweet_one.user.name %>
                     <%= f.hidden_field :username, value: @tweet_one.user.screen_name %>
                     <%= f.hidden_field :profile_url, value: @tweet_one.user.profile_image_url %>
@@ -181,7 +191,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                     <%= f.hidden_field :latitude, value: @lat %>
                     <%= f.hidden_field :longitude, value: @lng %>
                     <%= f.hidden_field :user_id, value: current_user.id %>
-
+                       <% end %>
 
                 @<%= @tweet_one.user.screen_name %></a></h5>
                 <p>
@@ -208,6 +218,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
               <div class="media-body">
                 <h5 class="media-heading"><%= @tweet_two.user.name %> </h5>
                 <h5> <a href="http://www.twitter.com/<%= @tweet_two.user.screen_name %>" target="_blank">
+
+                    <% if current_user %>
                     <%= f.hidden_field :name, value: @tweet_two.user.name %>
                     <%= f.hidden_field :username, value: @tweet_two.user.screen_name %>
                     <%= f.hidden_field :profile_url, value: @tweet_two.user.profile_image_url %>
@@ -216,7 +228,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                     <%= f.hidden_field :latitude, value: @lat %>
                     <%= f.hidden_field :longitude, value: @lng %>
                     <%= f.hidden_field :user_id, value: current_user.id %>
-
+                       <% end %>
 
                 @<%= @tweet_one.user.screen_name %></a></h5>
                 <p>
