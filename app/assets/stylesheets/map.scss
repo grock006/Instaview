@@ -11,10 +11,10 @@ html, body, #map-canvas {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    font-family: 'proxima-nova', 'Helvetica Neue', Arial;
+    font-family: Arial;
 }
 a {
-    font-family: 'proxima-nova', 'Helvetica Neue', Arial;
+    font-family: Arial;
     text-decoration: none;
     color: #3f729b;
     font-size: 12px;
@@ -24,31 +24,60 @@ a:hover {
 }
 
 // NAVBAR STYLES /////////////////////////////////
+.container-fluid {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 button.btn-search  {
     border-radius: 0px;
-    height: 34px;
-    font-size: 12px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border: 1px solid #D8D8D8; 
+    padding: 5px 25px;
 }
 .navbar {
     margin-bottom: 0px;
     border-bottom: 1px solid #D8D8D8; 
+    background-color: #333333;
 }
 
 .navbar-nav > li {
     color: white;
-    padding-top: 13px;
+    padding-top: 10px;
     padding-right: 10px;
 }
 
-.navbar-nav li  a {
+.navbar-nav li a {
     font-size: 15px;
-    color: white;
+    color: #D8D8D8;
+    font-weight: bolder;
+}
+.navbar-nav li a:hover {
+    color: #fff;
 }
 .navbar-inverse .navbar-brand {
     color: white;
-    font-size: 25px;
+    font-size: 33px;
+    padding-left: 30px;
+    text-shadow: 4px 4px 1px black;
 }
 
+#panel-toggle {
+        position: absolute;
+        top: 1%;
+        left: 60%;
+        margin-left: -100px;
+        z-index: 5;
+        background-color: black;
+}
+.navbar select {
+     border-radius: 0px;
+}
+.navbar-form .form-control {
+    padding: 15px;
+}
 
 // SIGNUP/LOGIN FORMS /////////////////////////// 
 
@@ -78,6 +107,12 @@ button.btn-search  {
 
 .background-times-square {
     background-image: url("times_square.jpg");
+    background-size: cover;
+    height: 100%;
+}
+
+.background-bazaar {
+    background-image: url("bazaar.jpg");
     background-size: cover;
     height: 100%;
 }
@@ -157,15 +192,6 @@ img.main {
 }
 img.profile {
     width: 10%;
-}
-
-#panel-toggle {
-        position: absolute;
-        top: 8%;
-        left: 99%;
-        margin-left: -100px;
-        z-index: 5;
-        background-color: black;
 }
 .panel-1 {
     position: absolute;
