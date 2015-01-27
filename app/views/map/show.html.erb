@@ -57,7 +57,12 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <%= f.hidden_field :icon, value: "fa-instagram" %>
             <%= f.hidden_field :latitude, value: @lat %>
             <%= f.hidden_field :longitude, value: @lng %>
+            
+            <% if current_user %>
             <%= f.hidden_field :user_id, value: current_user.id %>
+            <% else %>
+            <%= f.hidden_field :user_id, value: nil %>
+            <% end %>
 
             
             <%= @image_one.user.username%>
