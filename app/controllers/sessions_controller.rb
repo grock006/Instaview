@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:user][:email])
 
     if user && user.authenticate(params[:user][:password])
-      flash[:success] = "You logged in successfully!"
       session[:user_id] = user.id
       redirect_to "/map"
     else

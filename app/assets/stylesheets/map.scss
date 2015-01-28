@@ -45,14 +45,16 @@ button.btn-search  {
 
 .navbar-nav > li {
     color: white;
-    padding-top: 10px;
-    padding-right: 10px;
+    padding-top: 15px;
+    font-size: 13px;
 }
 
 .navbar-nav li a {
-    font-size: 15px;
+    font-size: 13px;
     color: #D8D8D8;
     font-weight: bolder;
+     padding-right: 10px;
+    padding-left: 10px; 
 }
 .navbar-nav li a:hover {
     color: #fff;
@@ -66,9 +68,9 @@ button.btn-search  {
 
 #panel-toggle {
         position: absolute;
-        top: 2.5%;
-        left: 80%;
-        margin-left: -100px;
+        bottom: 5%;
+        right: 3%;
+        // margin-left: -100px;
         z-index: 5;
         background-color: black;
 }
@@ -77,6 +79,9 @@ button.btn-search  {
 }
 .navbar-form .form-control {
     padding: 15px;
+}
+.navbar-nav span#blue-favorites a {
+    color: #2980B9;
 }
 
 // SIGNUP/LOGIN FORMS /////////////////////////// 
@@ -95,7 +100,7 @@ button.btn-search  {
     border: 1px solid $border-color;
     border-radius: 5px;
     z-index: 5;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 .background-yosemite {
@@ -134,9 +139,6 @@ button.btn-search  {
     width: 100%;
     height: 100%;
     background-size: contain;
-}
-.navbar-nav li .blue-favorites a  {
-    color: #0000FF;
 }
 
 .panel-favorites {

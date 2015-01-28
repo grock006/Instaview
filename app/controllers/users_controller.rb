@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if @user.save # sign up was success
       redirect_to "/login"
     else
+      flash.now[:danger] = @user.errors.full_messages.to_sentence
       render :new
     end
   end

@@ -4,10 +4,17 @@
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
 
-				<%= form_for @user do |f| %>
+			 
+		     
 
+				<%= form_for @user do |f| %>
 				<div class="form-group signup-form">
-					<h1>Signup</h1>
+				
+				<% flash.each do |key, value| %>
+		            <p class="alert alert-<%= key %>"><%= value %></p>
+		          <% end %>
+
+				<h1>Signup</h1>
 				  <strong>First Name: </strong>
 				  <%= f.text_field :first_name, class: "form-control" %><br>
 				 <strong> Last Name: </strong>
@@ -21,7 +28,6 @@
 				  <%= f.submit "Signup", class: "btn btn-default" %><br>
 				</div>
 				<% end %>
-
 				
 
 		</div>

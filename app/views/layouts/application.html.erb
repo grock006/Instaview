@@ -46,10 +46,10 @@
         <li>
             <div class='pull-right'>
                 <% if current_user %>
-                  You are signed in as <%= current_user.email %> | <%= link_to "Logout", logout_path %> |<span class="blue-favorites"> <%= link_to "Favorites", favorites_path %>
+                  <span id="blue-favorites"><a><%= current_user.email %></a></span> <%= link_to "Logout", logout_path %> <%= link_to "Favorites", favorites_path %>
                 </span>
                 <% else %>
-                  <%= link_to "Login", login_path %> | <%= link_to "Signup", signup_path %>
+                  <%= link_to "Login", login_path %> <%= link_to "Signup", signup_path %>
                 <% end %>
               </div>
         </li> 
