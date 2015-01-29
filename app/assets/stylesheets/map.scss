@@ -61,7 +61,7 @@ button.btn-search  {
 }
 .navbar-inverse .navbar-brand {
     color: white;
-    font-size: 33px;
+    font-size: 24px;
     padding-left: 30px;
     text-shadow: 4px 4px 1px black;
 }
@@ -111,15 +111,17 @@ button.btn-search  {
 
 
 .background-times-square {
-    background-image: url("times_square.jpg");
+    background-image: url("taj_mahal.png");
     background-size: cover;
     height: 100%;
+    background-repeat: no-repeat;
 }
 
 .background-bazaar {
-    background-image: url("bazaar.jpg");
+    background-image: url("grand_canyon.png");
     background-size: cover;
     height: 100%;
+    background-repeat: no-repeat;
 }
 
 
@@ -209,7 +211,7 @@ img.profile {
 }
 .panel-2 {
     position: absolute;
-    top: 10%;
+    top: 13%;
     left: 78%;
     z-index: 5;
     background-color: #fff;
@@ -281,7 +283,7 @@ img.profile {
 }
 .panel-8 {
     position: absolute;
-    top: 10%;
+    top: 13%;
     left: 20%;
     z-index: 5;
     background-color: #fff;

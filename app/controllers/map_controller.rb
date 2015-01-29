@@ -8,8 +8,8 @@ class MapController < ApplicationController
 
     # Takes address params from the search bar
     @address =(params[:address])
-    @search_field = (params[:search_field])
-    @search = @search_field.to_i
+    #@search_field = (params[:search_field])
+    #@search = @search_field.to_i
 
     # Passes address into the Geokit gem
     # @latlng = "37.739624, -119.576333"
@@ -21,7 +21,7 @@ class MapController < ApplicationController
     @lng = @a.lng 
 
     # if latitude and longitude values are nil, redirect to the index page
-        if @lat == nil && @lng == nil || @search_field == nil
+        if @lat == nil && @lng == nil #|| @search_field == nil
           redirect_to "/map"
         else
 
