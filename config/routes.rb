@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-resources :favorites
+  resources :favorites
 
 
 end

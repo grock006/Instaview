@@ -94,13 +94,18 @@ button.btn-search  {
 .signup-form {
     background-color: #fff;
     border: 1px solid $border-color;
-    opacity: 0.8;
+    opacity: 0.7;
     padding: 20px;
     box-shadow: $panel-shadow;
     border: 1px solid $border-color;
     border-radius: 5px;
     z-index: 5;
     margin-top: 10%;
+}
+
+.signup-form h1 {
+    text-align: center;
+    font-weight: bolder;
 }
 
 .background-yosemite {
@@ -111,14 +116,14 @@ button.btn-search  {
 
 
 .background-times-square {
-    background-image: url("taj_mahal.png");
+    background-image: url("times_square.jpg");
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
 }
 
 .background-bazaar {
-    background-image: url("grand_canyon.png");
+    background-image: url("bazaar.jpg");
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
@@ -131,16 +136,32 @@ button.btn-search  {
     height: 100%;
     width: 100%;
     z-index: 2;
-}   
+}
 
+input.btn-search  {
+    border-radius: 0px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border: 1px solid #D8D8D8; 
+    padding: 5px 25px;
+}
+
+input.btn-search:hover  {
+    color: #D8D8D8; 
+}  
+
+.form-control {
+    border: 2px solid #5b5b5b;
+}
 
 // FAVORITES PAGE //////////////////////////////////////
 
 .favorites {
     background-color: #D8D8D8;
     width: 100%;
-    height: 100%;
-    background-size: contain;
+    height: 1000%;
+    background-size: cover;
 }
 
 .panel-favorites {
@@ -158,7 +179,6 @@ button.btn-search  {
 }
 
 .panel-favorites a {
-    color: black;
     font-weight: bolder;
 }
 
@@ -223,9 +243,10 @@ img.profile {
 }
 .panel-3 {
     position: absolute;
-    top: 20%;
-    left: 80%;
-    z-index: 6;
+    top: 37%;
+    left: 22%;
+    z-index: 5;
+    background-color: #fff;
     border: 2px solid $border-color;
     opacity: 0.8;
    padding: $instagram-panel-padding;
@@ -238,7 +259,7 @@ img.profile {
     left: 10%;
     z-index: 5;
     background-color: #fff;
-    border: 1px solid #e6e6e6;
+    border: 2px solid #e6e6e6;
     opacity: 0.8;
     padding: $instagram-panel-padding;
     box-shadow: $panel-shadow;
@@ -246,7 +267,7 @@ img.profile {
 }
 .panel-5 {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 72%;
     z-index: 5;
     background-color: #fff;
@@ -259,7 +280,7 @@ img.profile {
 .panel-6 {
     position: absolute;
     top: 60%;
-    left: 80%;
+    left: 82%;
     z-index: 5;
     background-color: #fff;
     border: 2px solid $border-color;
@@ -270,7 +291,7 @@ img.profile {
 .panel-7 {
     position: absolute;
     top: 15%;
-    left: 45%;
+    left: 49%;
     z-index: 8;
     background-color: #fff;
     border: 2px solid #323232;

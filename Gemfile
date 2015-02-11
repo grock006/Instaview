@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Use bootstrap
+# Use bootstrap styling
 gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -22,23 +22,22 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-# instagram gem
+# instagram gem for making Instagram API calls
 gem 'instagram'
-#geokit gem
+#geokit gem for reverse geocoding latitude and longitude
 gem 'geokit'
-#twitter gem
+#twitter gem for making Twitter API calls
 gem 'twitter'
-#mongoid
+#mongoid gem for MongoDB database
 gem 'mongoid'
-#
-gem 'yelp'
-#
+#Figaro gem for storing secure ENV variables
 gem 'figaro'
+
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-#
+#Gem for heroku deployment
 gem 'rails_12factor', group: :production
 
 # Use Unicorn as the app server

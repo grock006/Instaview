@@ -1,8 +1,9 @@
 class FavoritesController < ApplicationController
 
 	def index
-		#@favorites = Favorite.all
-		@favorites = Favorite.where(user_id: current_user.id) 
+		#Finds the favorites by user_id of the current_user logged into the application
+		favorites = Favorite.where(user_id: current_user.id) 
+		@favorites = favorites.order("created_at DESC")
 	end
 
 	def create

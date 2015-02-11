@@ -25,25 +25,25 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyH6_rxueEsjg0nKXAN23lhziVfY1rirU"></script>
     <script>
-function initialize() {
-  var map = new google.maps.LatLng(<%= @lat %>,<%= @lng %>);
-  var panoramaOptions = {
-    position: map,
-    pov: {
-      heading: 90,
-      pitch: 0
-    },
-    zoom: 0
-  };
-  var myPano = new google.maps.StreetViewPanorama(
-      document.getElementById('map-canvas'),
-      panoramaOptions);
-  myPano.setVisible(true);
-  }
+          function initialize() {
+            var map = new google.maps.LatLng(<%= @lat %>,<%= @lng %>);
+            var panoramaOptions = {
+              position: map,
+              pov: {
+                heading: 90,
+                pitch: 0
+              },
+              zoom: 0
+            };
+            var myPano = new google.maps.StreetViewPanorama(
+                document.getElementById('map-canvas'),
+                panoramaOptions);
+            myPano.setVisible(true);
+            }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+          google.maps.event.addDomListener(window, 'load', initialize);
 
-window.opener.location.reload(true);
+          window.opener.location.reload(true);
 
     </script>
   </head>

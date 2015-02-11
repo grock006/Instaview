@@ -2,50 +2,38 @@
 
 <div class="container favorites">
 <div class="row">
-<div class="col-md-2"></div>
-<div class="col-md-6">
+          <div class="col-md-2"></div>
+          <div class="col-md-6">
 
 
-<h3><%= current_user.first_name %> <%= current_user.last_name %>'s Favorites</h3>
+              <h3><strong><%= current_user.first_name %> <%= current_user.last_name %>'s Favorites</strong></h3>
 
-<% @favorites.each do |f|%>
-<div class="panel-favorites">
-        <div style="float:right">
-         <%= link_to 'X', f, method: :delete %>    
+              <% @favorites.each do |f|%>
+              <div class="panel-favorites">
+                      <div style="float:right">
+                        <i class="fa <%= f.icon %> fa-lg"></i>
+                       <%= link_to 'X', f, method: :delete %>    
+                     </div>
+                      <ul class="media-list">
+                          <li class="media">
+                            <a class="media-left" href="#" title="#">
+                              <img src="<%= f.profile_url %>" alt="" style="width:50px">
+                            </a>
+                            <div class="media-body">
+                              <h5 class="media-heading"><strong><%= f.name %></strong></h5>
+                              <h5> <a href="#"><%= f.username %></a></h5>
+                                <img src="<%= f.main_url %>">                
+                               <p><%= f.text %></p>
+                                <strong><a href="map/show?address=<%= f.convert_location %>"><%= f.convert_location %></a></strong>
+                            </div>
+                          </li>
+                        </ul>        
+                   </div>
+                   <br>
+                  <% end %>
+
+
        </div>
-        <ul class="media-list">
-            <li class="media">
-              <a class="media-left" href="#" title="#">
-                <img src="<%= f.profile_url %>" alt="" style="width:50px">
-              </a>
-              <div class="media-body">
-                <h5 class="media-heading"><%= f.name %> <i class="fa <%= f.icon %> fa-lg"></i></h5>
-                <h5> <a href="#"><%= f.username %></a></h5>
-                  <img src="<%= f.main_url %>">                
-                 <p>
-                  <%= f.text %>
-                  <br>
-                  <br>
-                  <strong><%= f.convert_location %></strong>
-                </p>
-              </div>
-            </li>
-          </ul>        
-     </div>
-     <br>
-    <% end %>
-
-
-</div>
-<div class="col-md-4">
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-2"></div>
-<div class="col-md-8">
-</div>
-<div class="col-md-2"></div>
+    <div class="col-md-4"></div>
 </div>
 </div>

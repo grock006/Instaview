@@ -1,5 +1,7 @@
 class Favorite
   include Mongoid::Document
+  include Mongoid::Timestamps
+
   field :name, type: String
   field :username, type: String
   field :profile_url, type: String
