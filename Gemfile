@@ -33,6 +33,7 @@ gem 'mongoid'
 #Figaro gem for storing secure ENV variables
 gem 'figaro'
 
+gem "bullet", :group => "development"
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

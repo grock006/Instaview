@@ -1,28 +1,15 @@
-== README
+== INSTAVIEW
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails web application built to combine the Instagram, Twitter and Google Maps Street View APIs. User searches for a location(by address or landmark) and views recent Instagram Images and Tweets from that geolocation against the Google Street View backdrop.
 
-Things you may want to cover:
+It was built with Ruby on Rails, MongoDB, Bootstrap and Javascript. It uses the API for Google Street Maps,
+Instagram and Twitter.
 
-* Ruby version
+If you want to use
 
-* System dependencies
+Download.
 
-* Configuration
+Bundle install.
 
-* Database creation
+Rails Server.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
