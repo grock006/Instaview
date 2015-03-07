@@ -5,6 +5,8 @@ Ruby on Rails web application built to combine the Instagram, Twitter and Google
 It was built with Ruby on Rails, MongoDB, Bootstrap and Javascript. It uses the API for Google Street Maps,
 Instagram and Twitter.
 
+<a href="https://instaview-wdi.herokuapp.com/">Check Out The Site Here</a>
+
 If you want to use
 
 Download.
