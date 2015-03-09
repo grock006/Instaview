@@ -131,7 +131,7 @@ button.btn-search  {
 
 
 .dark-background {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -153,6 +153,34 @@ input.btn-search:hover  {
 
 .form-control {
     border: 2px solid #5b5b5b;
+}
+
+// ABOUT PAGE //////////////////////////////////////////
+
+.grand-canyon {
+    background-image: url("grand_canyon.png");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.about {
+    background-color: #fff;
+    border: 1px solid $border-color;
+    opacity: 0.7;
+    padding: 20px;
+    box-shadow: $panel-shadow;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    z-index: 5;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.about a {
+    color: #4183c4;
+    font-size: 24px;
 }
 
 // FAVORITES PAGE //////////////////////////////////////
