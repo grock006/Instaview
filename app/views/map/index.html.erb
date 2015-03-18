@@ -30,8 +30,8 @@
             var panoramaOptions = {
               position: map,
               pov: {
-                heading: 90,
-                pitch: 0
+                heading: 0,
+                pitch: -4
               },
               zoom: 0
             };
@@ -48,8 +48,54 @@
     </script>
   </head>
   <body>
-    
+
+
+    <%= render partial: "objects" %>
+
+ <div class="about-dark"></div>   
+
+  <div class="panel-about">
+     <div class="row">
+      <div class="col-md-6">
+      <h1 class="text-center"><strong>Instaview displays geolocated Instagrams and Tweets against Google Street View.</strong></h1>
+      </div>
+
+  
+    <div class="col-md-6 text-center">
+        <h3><strong>Try It Out Here!</strong></h3>
+      <form action="/map/show">
+        <input type="hidden" class="form-control" name="address" value="Grand Canyon, AZ">
+        <button type="submit" class="btn btn-default btn-sm btn-about">Grand Canyon</button>
+      </form>
+        <form action="/map/show">
+        <input type="hidden" class="form-control" name="address" value="Empire State Building">
+        <button type="submit" class="btn btn-default btn-sm btn-about">Empire State Building</button>
+      </form>
+      <form action="/map/show">
+        <input type="hidden" class="form-control" name="address" value="Chichen Itza">
+        <button type="submit" class="btn btn-default btn-sm btn-about">Chichen Itza</button>
+      </form>
+     <form action="/map/show">
+        <input type="hidden" class="form-control" name="address" value="Colosseum">
+        <button type="submit" class="btn btn-default btn-sm btn-about">Colosseum</button>
+      </form>
+      <form action="/map/show">
+        <input type="hidden" class="form-control" name="address" value="Golden Gate Bridge">
+        <button type="submit" class="btn btn-default btn-sm btn-about">Golden Gate Bridge</button>
+      </form>
+        <form action="/map/show">
+        <input type="hidden" class="form-control" name="address" value="Machu Picchu">
+        <button type="submit" class="btn btn-default btn-sm btn-about">Machu Picchu</button>
+      </form>
+      <h3>Or Enter Any Full Address or Landmark in the Search Field</h3>
+    </div>
+    </div>
+
+  </div>
+  
+
     <div id="map-canvas"></div>
+
   </body>
   <script>
 

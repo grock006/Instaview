@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "users#new"
+  root "map#index"
   
   get '/map' => 'map#index'
   get '/map/show' => 'map#show'

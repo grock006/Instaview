@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    # @ip = request.remote_ip
+    # @ip2 = request.env["HTTP_X_FORWARDED_FOR"]
   end
 
   def create
