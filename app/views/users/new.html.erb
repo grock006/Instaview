@@ -10,7 +10,6 @@
 				<%= form_for @user do |f| %>
 				<div class="form-group signup-form">
 				<h1>SIGNUP</h1>
-				<h2><%= @ip %></h2>
 				<% flash.each do |key, value| %>
 		            <p class="alert alert-<%= key %>"><%= value %></p>
 		          <% end %>

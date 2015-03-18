@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @ip = request.remote_ip
   end
 
   def create
