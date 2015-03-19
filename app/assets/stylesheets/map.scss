@@ -3,7 +3,7 @@
 $instagram-panel-padding: 5px;
 $panel-shadow: 5px 5px 2px #323232;
 $border-color: #323232;
-$instagram-panel-width: 140px;
+$instagram-panel-width: 190px;
 $twitter-panel-width: 300px;
 
 // GLOBAL STYLES ////////////////////////////////////////
@@ -227,7 +227,7 @@ h4 {
     width: 150px;
     padding: 5px;
     margin: 0;
-    font-size: 10px;
+    font-size: 14px;
 }
 h5 {
     padding: 0px;
@@ -240,10 +240,10 @@ h5 {
     margin: 0;
 }
 img.main {
-    width:100px;
+    width:150px;
 }
 img.profile {
-    width: 10%;
+    width: 25%;
 }
 .panel-1 {
     position: absolute;

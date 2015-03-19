@@ -3,13 +3,14 @@
     <%= form_for Favorite.new do |f| %>
       <div class="panel-1">
         <i class="fa fa-instagram fa-lg" style="float:right"></i>
-        <a href="<%= @image_one.link %>" target="_blank" title="#"><img class="main" src="<%= @image_one.images.thumbnail.url %>">
+        <a href="<%= @image_one.link %>" target="_blank" title="#">
+          <img class="main" src="<%= @image_one.images.low_resolution.url %>">
           <h4>
             <img class="profile" src="<%= @image_one.user.profile_picture %>">   
             <!-- Create hidden fields with values from Instagram objects  -->
             <% if current_user %>
             <%= f.hidden_field :name, value: @image_one.user.username %>
-            <%= f.hidden_field :main_url, value: @image_one.images.thumbnail.url %>
+            <%= f.hidden_field :main_url, value: @image_one.images.low_resolution.url %>
             <%= f.hidden_field :profile_url, value: @image_one.user.profile_picture %>
             <%= f.hidden_field :icon, value: "fa-instagram" %>
             <%= f.hidden_field :latitude, value: @lat %>
@@ -29,12 +30,12 @@
     <div class="panel-2">
       <i class="fa fa-instagram fa-lg" style="float:right;"></i>
         <a href="<%= @image_two.link %>" target="_blank" title="#">
-          <img src="<%= @image_two.images.thumbnail.url %>" class="main">       
+          <img src="<%= @image_two.images.low_resolution.url %>" class="main">       
         <h4>
           <img src="<%= @image_one.user.profile_picture %>" class="profile">             
             <% if current_user %>  
             <%= f.hidden_field :name, value: @image_two.user.username %>
-            <%= f.hidden_field :main_url, value: @image_two.images.thumbnail.url %>
+            <%= f.hidden_field :main_url, value: @image_two.images.low_resolution.url %>
             <%= f.hidden_field :profile_url, value: @image_two.user.profile_picture %>
             <%= f.hidden_field :icon, value: "fa-instagram" %>
             <%= f.hidden_field :latitude, value: @lat %>
@@ -54,12 +55,12 @@
     <div class="panel-3">
       <i class="fa fa-instagram fa-lg" style="float:right;"></i>
         <a href="<%= @image_three.link %>" target="_blank" title="#">
-          <img src="<%= @image_three.images.thumbnail.url %>" class="main">       
+          <img src="<%= @image_three.images.low_resolution.url %>" class="main">       
         <h4>
           <img src="<%= @image_three.user.profile_picture %>" class="profile">             
             <% if current_user %>  
             <%= f.hidden_field :name, value: @image_three.user.username %>
-            <%= f.hidden_field :main_url, value: @image_three.images.thumbnail.url %>
+            <%= f.hidden_field :main_url, value: @image_three.images.low_resolution.url %>
             <%= f.hidden_field :profile_url, value: @image_three.user.profile_picture %>
             <%= f.hidden_field :icon, value: "fa-instagram" %>
             <%= f.hidden_field :latitude, value: @lat %>
@@ -78,13 +79,13 @@
       <%= form_for Favorite.new do |f| %>
     <div class="panel-4">
       <i class="fa fa-instagram fa-lg" style="float:right;"></i>
-        <a href="<%= @image_four.link %>" target="_blank" title="#"><img src="<%= @image_four.images.thumbnail.url %>" class="main">
+        <a href="<%= @image_four.link %>" target="_blank" title="#"><img src="<%= @image_four.images.low_resolution.url %>" class="main">
             <h4>
             <img class="profile" src="<%= @image_four.user.profile_picture %>" class="profile">  
 
             <% if current_user %>
                <%= f.hidden_field :name, value: @image_four.user.username %>
-               <%= f.hidden_field :main_url, value: @image_four.images.thumbnail.url %>
+               <%= f.hidden_field :main_url, value: @image_four.images.low_resolution.url %>
               <%= f.hidden_field :profile_url, value: @image_four.user.profile_picture %>
               <%= f.hidden_field :icon, value: "fa-instagram" %>
             <%= f.hidden_field :latitude, value: @lat %>
@@ -103,13 +104,13 @@
     <%= form_for Favorite.new do |f| %>
     <div class="panel-5">
           <i class="fa fa-instagram fa-lg" style="float:right;"></i>
-        <a href="<%= @image_five.link %>" target="_blank" title="#"><img src="<%= @image_five.images.thumbnail.url %>" class="main">
+        <a href="<%= @image_five.link %>" target="_blank" title="#"><img src="<%= @image_five.images.low_resolution.url %>" class="main">
            <h4>
             <img class="profile" src="<%= @image_five.user.profile_picture %>" class="profile">  
 
             <% if current_user %>
               <%= f.hidden_field :name, value: @image_five.user.username %>
-              <%= f.hidden_field :main_url, value: @image_five.images.thumbnail.url %>
+              <%= f.hidden_field :main_url, value: @image_five.images.low_resolution.url %>
               <%= f.hidden_field :profile_url, value: @image_five.user.profile_picture %>
               <%= f.hidden_field :icon, value: "fa-instagram" %>
               <%= f.hidden_field :latitude, value: @lat %>
@@ -127,13 +128,13 @@
      <%= form_for Favorite.new do |f| %>
     <div class="panel-6">
           <i class="fa fa-instagram fa-lg" style="float:right;"></i>
-        <a href="<%= @image_six.link %>" target="_blank" title="#"><img src="<%= @image_six.images.thumbnail.url %>" class="main">
+        <a href="<%= @image_six.link %>" target="_blank" title="#"><img src="<%= @image_six.images.low_resolution.url %>" class="main">
            <h4>
             <img class="profile" src="<%= @image_six.user.profile_picture %>" class="profile">  
 
             <% if current_user %>
               <%= f.hidden_field :name, value: @image_six.username %>
-              <%= f.hidden_field :main_url, value: @image_six.images.thumbnail.url %>
+              <%= f.hidden_field :main_url, value: @image_six.images.low_resolution.url %>
               <%= f.hidden_field :profile_url, value: @image_six.user.profile_picture %>
               <%= f.hidden_field :icon, value: "fa-instagram" %>
               <%= f.hidden_field :latitude, value: @lat %>
