@@ -30,17 +30,18 @@ a:hover {
 }
 
 button.btn-search  {
-    border-radius: 0px;
+    border-radius: 3px;
     font-size: 15px;
     background-color: black;
     color: white;
-    border: 1px solid #D8D8D8; 
     padding: 5px 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: none;
 }
 .navbar {
     margin-bottom: 0px;
     border-bottom: 1px solid #D8D8D8; 
-    background-color: #333333;
+    background-color: #474747;
 }
 
 .navbar-nav > li {
@@ -50,20 +51,36 @@ button.btn-search  {
 }
 
 .navbar-nav li a {
-    font-size: 13px;
+    font-size: 15px;
     color: #D8D8D8;
-    font-weight: bolder;
+    font-weight: 400;
      padding-right: 10px;
     padding-left: 10px; 
+    font-family: 'Source Sans Pro', sans-serif;
 }
 .navbar-nav li a:hover {
     color: #fff;
 }
+
+.navbar-nav li a.highlight {
+  background: rgba(0,0,0,0.5);
+  border-radius: 3px;
+  color: white;
+  padding: 6px 12px;
+  margin-left: 4px;
+}
+
+.navbar-nav li a.highlight:hover {
+  color: #D8D8D8;;
+}
+
 .navbar-inverse .navbar-brand {
     color: white;
     font-size: 24px;
     padding-left: 30px;
-    text-shadow: 4px 4px 1px black;
+    text-shadow: 2px 2px 1px black;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 #panel-toggle {
@@ -145,6 +162,7 @@ input.btn-search  {
     color: white;
     border: 1px solid #D8D8D8; 
     padding: 5px 25px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 input.btn-search:hover  {
@@ -224,10 +242,10 @@ p a {
 }
 
 h4 {
-    width: 150px;
+    width: 170px;
     padding: 5px;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 h5 {
     padding: 0px;
@@ -243,7 +261,7 @@ img.main {
     width:150px;
 }
 img.profile {
-    width: 25%;
+    width: 15%;
 }
 .panel-1 {
     position: absolute;
