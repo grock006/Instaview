@@ -10,13 +10,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  def current_user_favorites
-    if session[:user_id]
-     @current_user_favorites ||= Favorite.where(session[:user_id]["$oid"])  
-   end
-  end
-  helper_method :current_user_favorites
-
   def authorize
     redirect_to login_path unless current_user
   end
