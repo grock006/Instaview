@@ -24,6 +24,11 @@ a:hover {
 }
 
 // NAVBAR STYLES /////////////////////////////////
+.navbar-right {
+  margin-right: -10px;
+}
+
+
 .container-fluid {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -53,7 +58,7 @@ button.btn-search:hover {
 
 .navbar-nav > li {
     color: white;
-    padding-top: 15px;
+    padding-top: 18px;
     font-size: 13px;
 }
 
@@ -72,13 +77,14 @@ button.btn-search:hover {
 .navbar-nav li a.highlight {
   background: rgba(0,0,0,0.5);  
   border-radius: 3px;
-  color: black;
+  color: white;
   padding: 6px 12px;
   margin-left: 4px;
 }
 
 .navbar-nav li a.highlight:hover {
-  color: #D8D8D8;
+  color: #ddd;
+  background-color: none;
 }
 
 .pull-right {
@@ -117,6 +123,19 @@ button.btn-search:hover {
 
 // SIGNUP/LOGIN FORMS /////////////////////////// 
 
+a.highlight {
+  background: rgba(0,0,0,0.5);  
+  border-radius: 3px;
+  color: white;
+  padding: 10px 25px;
+  margin-left: 4px;
+  font-size: 15px;
+}
+
+a.highlight:hover {
+  color: #ddd;
+}
+
 .form-control {
     border-radius: 0px;
     padding: 15px;
@@ -127,7 +146,7 @@ button.btn-search:hover {
     border: 1px solid $border-color;
     opacity: 0.7;
     padding: 20px;
-    box-shadow: $panel-shadow;
+    // box-shadow: $panel-shadow;
     border: 1px solid $border-color;
     border-radius: 5px;
     z-index: 5;
@@ -170,17 +189,21 @@ button.btn-search:hover {
 }
 
 input.btn-search  {
-    border-radius: 0px;
+    border: none;
+    border-radius: 3px;
     font-size: 15px;
-    background-color: black;
+     background-color: none;
+    background: rgba(0,0,0,0.5);
     color: white;
-    border: 1px solid #D8D8D8; 
-    padding: 5px 25px;
+    padding: 7px 25px;
     font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 4px;
 }
 
 input.btn-search:hover  {
-    color: #D8D8D8; 
+    background-color: none;
+    background: rgba(0,0,0,0.5);
+    color: #D8D8D8;
 }  
 
 .form-control {
@@ -242,6 +265,18 @@ input.btn-search:hover  {
     font-weight: bolder;
 }
 
+i.liked {
+    color:red
+}
+
+i.saved {
+    color: gold;
+}
+
+.btn-sm, .btn-group-sm>.btn {
+    margin-right: 3px;
+}
+
 
 // PANEL STYLES ON MAP SHOW PAGE //////////////////////////////
 p {
@@ -265,9 +300,9 @@ h5 {
     padding: 0px;
     margin: 0px;
 }
-.fa-star-o:hover {
-    color: yellow;
-}
+// .fa-star-o:hover {
+//     color: yellow;
+// }
 .media-heading {
     margin: 0;
 }

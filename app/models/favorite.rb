@@ -10,6 +10,8 @@ class Favorite
   field :icon, type: String
   field :latitude, type: Float
   field :longitude, type: Float
+  field :liked, type: Boolean
+  field :instagram_id, type: String
   belongs_to :user 
 
   def convert_location

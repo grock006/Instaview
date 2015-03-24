@@ -56,8 +56,14 @@
 
   <div class="panel-about">
      <div class="row">
-      <div class="col-md-6">
-      <h1 class="text-center"><strong>Instaview displays geolocated Instagrams and Tweets against Google Street View.</strong></h1>
+      <div class="col-md-6 text-center">
+      <h1><strong>Instaview displays geolocated Instagrams and Tweets against Google Street View.</strong></h1>
+        <br>
+      <% if current_user %>
+          <a href="/about" class="highlight">Find Out More</a>
+      <% else %>
+          <a href="/oauth/connect" class="highlight"><i class="fa fa-instagram"></i> Sign in with Instagram</a>
+      <% end %>
       </div>
 
   

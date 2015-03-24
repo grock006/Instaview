@@ -1,7 +1,7 @@
 <!--Begin Instagram objects  -->
     <!-- Create form for new Favorite, populated by the hidden fields below and pulled from the Instagram object API call -->
+    <div class="panel-1">
     <%= form_for Favorite.new do |f| %>
-      <div class="panel-1">
         <i class="fa fa-instagram fa-lg" style="float:right"></i>
         <a href="<%= @image_one.link %>" target="_blank" title="#">
           <img class="main" src="<%= @image_one.images.low_resolution.url %>">
@@ -21,13 +21,24 @@
           </h4>
         </a>
         <!-- Button submits hidden fields to the Favorites controller -->
-        <button type="submit" class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
-      </div>
+        <button type="submit" class="btn btn-default btn-sm" style="float:right;">Save 
+          <i class="fa fa-star-o saved"></i></button>
     <% end %>
 
+      <div class="text-center">
+              <a href="/like/<%= @image_one.id %>?address=<%= params[:address] %>" style="float:right;" remote="true">  
+                <button class="btn btn-default btn-sm">
+                Like 
+                <i class="fa fa-heart liked"></i>
+              </button>
+              </a>
+        </div>
 
+      </div>
+
+
+      <div class="panel-2">
     <%= form_for Favorite.new do |f| %>
-    <div class="panel-2">
       <i class="fa fa-instagram fa-lg" style="float:right;"></i>
         <a href="<%= @image_two.link %>" target="_blank" title="#">
           <img src="<%= @image_two.images.low_resolution.url %>" class="main">       
@@ -47,12 +58,22 @@
         </h4>
         </a> 
         <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
-     </div>
       <% end %>
 
+          <div class="text-center">
+              <a href="/like/<%= @image_two.id %>?address=<%= params[:address] %>" style="float:right;" remote="true">  
+                <button class="btn btn-default btn-sm">
+                Like 
+                <i class="fa fa-heart liked"></i>
+              </button>
+              </a>
+        </div>
 
+        </div>
+
+
+      <div class="panel-3">
       <%= form_for Favorite.new do |f| %>
-    <div class="panel-3">
       <i class="fa fa-instagram fa-lg" style="float:right;"></i>
         <a href="<%= @image_three.link %>" target="_blank" title="#">
           <img src="<%= @image_three.images.low_resolution.url %>" class="main">       
@@ -72,12 +93,22 @@
         </h4>
         </a> 
         <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
-     </div>
       <% end %>
 
+        <div class="text-center">
+              <a href="/like/<%= @image_three.id %>?address=<%= params[:address] %>" style="float:right;" remote="true">  
+                <button class="btn btn-default btn-sm">
+                Like 
+                <i class="fa fa-heart liked"></i>
+              </button>
+              </a>
+        </div>
 
+    </div>
+
+
+      <div class="panel-4">
       <%= form_for Favorite.new do |f| %>
-    <div class="panel-4">
       <i class="fa fa-instagram fa-lg" style="float:right;"></i>
         <a href="<%= @image_four.link %>" target="_blank" title="#"><img src="<%= @image_four.images.low_resolution.url %>" class="main">
             <h4>
@@ -97,12 +128,22 @@
           </h4>
         </a>
         <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
-    </div>
     <% end %>
 
+      <div class="text-center">
+              <a href="/like/<%= @image_four.id %>?address=<%= params[:address] %>" style="float:right;" remote="true">  
+                <button class="btn btn-default btn-sm">
+                Like 
+                <i class="fa fa-heart liked"></i>
+              </button>
+              </a>
+        </div>
 
+      </div>
+
+
+      <div class="panel-5">
     <%= form_for Favorite.new do |f| %>
-    <div class="panel-5">
           <i class="fa fa-instagram fa-lg" style="float:right;"></i>
         <a href="<%= @image_five.link %>" target="_blank" title="#"><img src="<%= @image_five.images.low_resolution.url %>" class="main">
            <h4>
@@ -122,11 +163,24 @@
           </h4>
         </a>
         <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
-     </div>
       <% end %>    
 
+        <div class="text-center">
+              <a href="/like/<%= @image_five.id %>?address=<%= params[:address] %>" style="float:right;" remote="true">  
+                <button class="btn btn-default btn-sm">
+                Like 
+                <i class="fa fa-heart liked"></i>
+              </button>
+              </a>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="panel-6">
      <%= form_for Favorite.new do |f| %>
-    <div class="panel-6">
           <i class="fa fa-instagram fa-lg" style="float:right;"></i>
         <a href="<%= @image_six.link %>" target="_blank" title="#"><img src="<%= @image_six.images.low_resolution.url %>" class="main">
            <h4>
@@ -145,9 +199,21 @@
             <%= @image_six.user.username%>
           </h4>
         </a>
-        <button class="btn btn-default btn-sm" style="float:right;">Save <i class="fa fa-star-o"></i></button>
-     </div>
+        <button class="btn btn-default btn-sm" style="float:right;">Save 
+          <i class="fa fa-star-o"></i>
+        </button>
      <% end %>
+
+        <div class="text-center">
+              <a href="/like/<%= @image_six.id %>?address=<%= params[:address] %>" style="float:right;" remote="true">  
+                <button class="btn btn-default btn-sm">
+                Like 
+                <i class="fa fa-heart liked"></i>
+              </button>
+              </a>
+        </div>
+
+      </div>
      <!-- End Instagram Objects -->
     
     <!-- Begin Tweet Objects -->

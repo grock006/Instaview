@@ -13,6 +13,8 @@
 				<% flash.each do |key, value| %>
 		            <p class="alert alert-<%= key %>"><%= value %></p>
 		          <% end %>
+		          <strong>Username: </strong>
+				  <%= f.text_field :username, class: "form-control" %><br>
 				  <strong>First Name: </strong>
 				  <%= f.text_field :first_name, class: "form-control" %><br>
 				 <strong> Last Name: </strong>
@@ -23,7 +25,8 @@
 				  <%= f.password_field :password, class: "form-control"  %><br>
 				  <strong>Please confirm your password: </strong>
 				  <%= f.password_field :password_confirmation, class: "form-control"  %><br>
-				  <%= f.submit "Signup", class: "btn btn-search" %><br>
+				  <%= f.submit "Signup", class: "btn btn-search" %> or    <a href="/oauth/connect" class="highlight"><i class="fa fa-instagram"></i> Sign in with Instagram</a>
+				  <br>
 				</div>
 				<% end %>
 				
