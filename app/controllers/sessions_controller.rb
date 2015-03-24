@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   # INSTAGRAM
 
-  CALLBACK_URL = "https://instaview-wdi.herokuapp.com/oauth/callback"
+  CALLBACK_URL = ENV['callback_url']
 
   def connect
     redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL, :scope => "likes")
@@ -15,9 +15,9 @@ class SessionsController < ApplicationController
     @response = Instagram.get_access_token(params[:code], :redirect_uri => CALLBACK_URL)
 
     # # # checks to see if user with same username already exists
-    user = User.find_by(username: @response.user["username"])
-    if user && user.access_token == @response.access_token 
-    else
+    # user = User.find_by(username: @response.user["username"])
+    # if user && user.access_token == @response.access_token 
+    # else
       # creates new user if user doesnt exist
       user = User.new
       user.name = @response.user["full_name"]
@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
       user.password_confirmation = @response.access_token
       user.access_token = @response.access_token
       user.save
-    end
+    # end
     # sets session access_token and user_id
     session[:access_token] = user.access_token
     session[:user_id] = user.id
