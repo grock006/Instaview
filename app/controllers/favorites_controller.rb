@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+	 require 'uri'
 
 	def index
 		#Finds the favorites by user_id of the current_user logged into the application
@@ -23,7 +24,8 @@ class FavoritesController < ApplicationController
 	    if current_user
 	       @favorite = Favorite.create(user_id: current_user.id, instagram_id:(params[:id]), liked: true)
 		end
-	    redirect_to "/map/show?address=#{params[:address]}"
+		@address = URI.encode(params[:address])
+	    redirect_to "/map/show?address=#{@address}"
   	end
 
   	# current_user.favorite.where(instagram_id: @image_one.id ).liked == true 
