@@ -12,10 +12,8 @@ class User
   field :profile_picture, type: String
   has_many :favorites
 
-  # has_secure_password 
+  has_secure_password 
   # validates :username, uniqueness: true
-  # validates :first_name, presence: true
-  # validates :last_name, presence: true
   # validates :email, presence: true, uniqueness: true
-  # validates :password, confirmation: true
+  validates :password, confirmation: true
 end

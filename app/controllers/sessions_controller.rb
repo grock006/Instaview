@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   # INSTAGRAM
 
-  CALLBACK_URL = "http://localhost:3000/oauth/callback"
+  CALLBACK_URL = ENV['callback_url']
 
   def connect
     redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL, :scope => "likes")
@@ -23,6 +23,8 @@ class SessionsController < ApplicationController
       user.name = @response.user["full_name"]
       user.username = @response.user["username"]
       user.profile_picture = @response.user["profile_picture"]
+      user.password = @response.access_token
+      user.password_confirmation = @response.access_token
       user.access_token = @response.access_token
       user.save
     end
